@@ -111,4 +111,20 @@ public class ArrayUtils {
         }
         return count;
     }
+
+    /**
+     * Gets the most frequent value in the supplied int array.
+     * @param nums the array of numbers
+     * @return the most frequent value in the array
+     */
+    public static int getMostFrequent(int [] nums){
+        int mostFrequent = nums[0];
+        for(int i = 0; i < nums.length; i++){
+            if(count(nums[i], nums) > count(mostFrequent, nums)){
+                mostFrequent = nums[i];
+            }
+        }
+        return mostFrequent;
+    }
 }
+
