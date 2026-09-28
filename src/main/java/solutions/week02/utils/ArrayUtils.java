@@ -22,4 +22,19 @@ public class ArrayUtils {
             System.out.println(i + ": \"" + nums[i]+"\"");
         }
     }
+
+    /**
+     * Calculates the average of the elements in the supplied int array.
+     * @param nums the array of numbers
+     * @return the average of the numbers in the array
+     */
+    public static double average(int [] nums){  
+        double sum = 0;
+        for(int i = 0; i < nums.length; i++){
+            sum += nums[i];
+        }
+        return sum / nums.length;
+    }
+
+    
 }
