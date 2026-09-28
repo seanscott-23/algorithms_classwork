@@ -80,4 +80,19 @@ public class ArrayUtils {
         }
         return min;
     }
+
+    /**
+     * Finds the minimum value in the supplied String array.
+     * @param names the array of strings
+     * @return the minimum value in the array
+     */
+    public static String findMin(String [] names){
+        String min = names[0];
+        for(int i = 0; i < names.length; i++){
+            if(names[i].compareTo(min) < 0){
+                min = names[i];
+            }
+        }
+        return min;
+    }
 }
