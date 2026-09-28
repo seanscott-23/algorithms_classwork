@@ -50,4 +50,19 @@ public class ArrayUtils {
         }
         return max;
     }
+
+    /**
+     * Finds the maximum value in the supplied String array.
+     * @param names the array of strings
+     * @return the maximum value in the array
+     */
+    public static String findMax(String [] names){
+        String max = names[0];
+        for(int i = 0; i < names.length; i++){
+            if(names[i].compareTo(max) > 0){
+                max = names[i];
+            }
+        }
+        return max;
+    }
 }
