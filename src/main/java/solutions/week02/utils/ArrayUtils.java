@@ -95,4 +95,20 @@ public class ArrayUtils {
         }
         return min;
     }
+
+    /**
+     * Counts the number of occurrences of a number in the supplied int array.
+     * @param num the number to count
+     * @param nums the array of numbers
+     * @return the number of occurrences of num in nums
+     */
+    public static int count(int num, int [] nums){
+        int count = 0;
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] == num){
+                count++;
+            }
+        }
+        return count;
+    }
 }
