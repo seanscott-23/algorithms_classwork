@@ -65,4 +65,19 @@ public class ArrayUtils {
         }
         return max;
     }
+
+    /**
+     * Finds the minimum value in the supplied int array.
+     * @param nums the array of numbers
+     * @return the minimum value in the array
+     */
+    public static int findMin(int [] nums){
+        int min = nums[0];
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] < min){
+                min = nums[i];
+            }
+        }
+        return min;
+    }
 }
