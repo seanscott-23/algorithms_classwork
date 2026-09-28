@@ -16,6 +16,10 @@ public class TestDisplayArrays {
         ArrayUtils.displayArray(nums);
         int freq = ArrayUtils.getMostFrequent(nums);
         System.out.println("Most frequent:" + freq);
+        double avg = ArrayUtils.average(nums);
+        System.out.println("Average:" + avg);
+        int cga = ArrayUtils.countGreaterThanAverage(nums);
+        System.out.println("Count:" + cga);
 
         System.out.println("------------------");
 

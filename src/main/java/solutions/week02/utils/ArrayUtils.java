@@ -142,5 +142,22 @@ public class ArrayUtils {
         }
         return count;
     }
+
+    /**
+     * Counts the amount of values in the array greater than the average
+     * @param nums the array of numbers
+     * @return the count of numbers in the array greater than the average
+     */
+    public static int countGreaterThanAverage(int [] nums){
+        int count = 0;
+        double average = average(nums);
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] > average){
+                count += 1;
+            }
+        }
+        return count;
+
+    }
 }
 
