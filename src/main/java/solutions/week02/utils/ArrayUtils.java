@@ -126,5 +126,21 @@ public class ArrayUtils {
         }
         return mostFrequent;
     }
+
+    /**
+     * Counts the amount of ints in the list greater than the provided int value
+     * @param nums the array of numbers
+     * @param num the number to compare against
+     * @return the count of numbers in the array greater than num
+     */
+    public static int countGreater(int [] nums, int num){
+        int count = 0;
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] > count){
+                count += 1;
+            }
+        }
+        return count;
+    }
 }
 

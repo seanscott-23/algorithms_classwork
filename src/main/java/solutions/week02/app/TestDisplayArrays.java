@@ -7,10 +7,15 @@ public class TestDisplayArrays {
         int[] nums = new int[10];
 
         for (int i = 0; i < nums.length; i++) {
-            nums[i] = i * 10;
+            nums[i] = i;
         }
 
+        nums[3] = 2;
+        nums[5] = 2;
+
         ArrayUtils.displayArray(nums);
+        int freq = ArrayUtils.getMostFrequent(nums);
+        System.out.println("Most frequent:" + freq);
 
         System.out.println("------------------");
 
