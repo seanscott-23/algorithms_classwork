@@ -36,5 +36,18 @@ public class ArrayUtils {
         return sum / nums.length;
     }
 
-    
+    /**
+     * Finds the maximum value in the supplied int array.
+     * @param nums the array of numbers
+     * @return the maximum value in the array
+     */
+    public static int findMax(int [] nums){
+        int max = nums[0];
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] > max){
+                max = nums[i];
+            }
+        }
+        return max;
+    }
 }
