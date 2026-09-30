@@ -30,5 +30,6 @@ public class TestDisplayArrays {
         }
 
         ArrayUtils.displayArray(text);
+
     }
 }
