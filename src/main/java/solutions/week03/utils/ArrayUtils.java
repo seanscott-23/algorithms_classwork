@@ -56,4 +56,29 @@ public class ArrayUtils {
 
         return mostFreq;
     }
+
+    public static int optimisedMaxFrequency(int [] data){
+        data = Arrays.copyOf(data, data.length);
+        Arrays.sort(data);
+
+        int mostFreq = data[0];
+        int maxCount = 0;
+        int count = 0;
+        int runStart = 0;
+        int runEnd = 0;
+
+        for(int i = 0; i < data.length -1; i++){
+            runEnd++;
+            if(data[runStart] != data[runEnd]){
+                count = runEnd - runStart;
+
+                if(count > maxCount){
+                    maxCount = count;
+                    mostFreq = data[runStart];
+                }
+                runStart = runEnd;
+            }
+        }
+        return mostFreq;
+    }
 }

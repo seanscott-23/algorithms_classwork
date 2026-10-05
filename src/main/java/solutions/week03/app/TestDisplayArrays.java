@@ -13,6 +13,8 @@ public class TestDisplayArrays {
             nums[i] = rg.nextInt(100);
         }
 
+        nums[2] = 75;
+        nums[7] = 75;
         ArrayUtils.displayArray(nums);
 
         System.out.println("------------------");
@@ -23,5 +25,8 @@ public class TestDisplayArrays {
         }else{
             System.out.println(target + " not found.");
         }
+        System.out.println("------------------");
+        int mostFreq = ArrayUtils.optimisedMaxFrequency(nums);
+        System.out.println("Most frequent number: " + mostFreq);
     }
 }
