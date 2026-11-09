@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class TestSorting {
-    private static Random randomGenerator = new Random();
+    private static final Random randomGenerator = new Random();
     static void main(String[] args) {
         int upperBound = 101;
         int [] data = generateRandomArray(upperBound);
@@ -28,6 +28,16 @@ public class TestSorting {
         int [] data = new int[20];
         for (int i = 0; i < data.length; i++) {
             data[i] = randomGenerator.nextInt(maxValue);
+        }
+
+        return data;
+    }
+
+    public static String[] generateRandomStringArray(int size){
+        String [] data = new String[size];
+
+        for (int i = 0; i < data.length; i++) {
+            data[i] = "Text -> " + randomGenerator.nextInt(size);
         }
 
         return data;

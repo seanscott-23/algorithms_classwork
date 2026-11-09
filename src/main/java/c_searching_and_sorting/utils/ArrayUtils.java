@@ -1,5 +1,7 @@
 package c_searching_and_sorting.utils;
 
+import java.util.Comparator;
+
 public class ArrayUtils {
     public static int binarySearch(int [] data, int target){
         if(data == null){
@@ -121,5 +123,25 @@ public class ArrayUtils {
                 swap(data, i, minPos);
             }
         }
+    }
+
+    public static void bubblesort(String [] data, Comparator<String> stringComparator){
+        if(data == null){
+            throw new IllegalArgumentException("Cannot sort null array");
+        }
+
+        for (int i = 0; i < data.length - 1; i++) {
+            for (int j = 0; j < data.length - 1 - i; j++) {
+                if(stringComparator.compare(data[j], data[j+1]) > 0){
+                    swap(data, j, j+1);
+                }
+            }
+        }
+    }
+
+    private static void swap(String[] data, int indexA, int indexB) {
+        String temp = data[indexA];
+        data[indexA] = data[indexB];
+        data[indexB] = temp;
     }
 }
